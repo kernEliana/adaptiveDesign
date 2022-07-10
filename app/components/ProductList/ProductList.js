@@ -1,6 +1,6 @@
 const React = require("react");
 const PropTypes = require('prop-types');
-const Image = require('nordic/image');
+const ProductCard = require('../ProductCard');
 
 function ProductList({ i18n, products }) {
   return (
@@ -8,22 +8,16 @@ function ProductList({ i18n, products }) {
     {
       products.length
         ? products.map(p => {
-          const { id, title, thumbnail, price, permalink } = p;
+          const { id, title, thumbnail, price } = p;
 
           return (
-            <li key={id} className="card">
-              <article>
-                <a href={permalink}>
-                  <figure className="img">
-                    <Image src={thumbnail} alt={i18n.gettext(title)} lazyload="off" />
-                  </figure>
-                </a>
-                <div className="info-products">
-                  <h4 className='price'>${price}</h4>
-                  <h3 className='title-product'>{i18n.gettext(title)} </h3>
-                </div>
-              </article>
-            </li>
+            <ProductCard 
+              i18n={i18n}
+              id={id} 
+              title={title}
+              thumbnail={thumbnail}
+              price={price}
+            />
           )
         })
         : <h4>{i18n.gettext('No se encontraron productos.')}</h4>
@@ -36,6 +30,11 @@ ProductList.propTypes = {
   i18n: PropTypes.shape({
     gettext: PropTypes.func.isRequired,
   }).isRequired,
+  products: PropTypes.array
 };
+
+ProductList.defaultProps = {
+  products: []
+}
 
 module.exports = ProductList;

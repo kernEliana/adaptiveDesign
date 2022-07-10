@@ -3,7 +3,7 @@ const ProductList = require('..');
 const { render, screen } = require('@testing-library/react');
 const products = require('./sample.json');
 
-describe('El componente ProductList', () => {
+describe('Ejercicio 1 - El componente ProductList', () => {
     let component;
     const i18n = { gettext: text => text };
 
@@ -23,3 +23,17 @@ describe('El componente ProductList', () => {
         expect(motorola).toBeInTheDocument();
     });
 });
+
+describe('Ejercicio 2 - El componente ProductList', () => {
+    let component;
+    const i18n = { gettext: text => text };
+
+    beforeEach(() => {
+        component = render(<ProductList i18n={i18n} products={[]}/>);
+    });
+
+    test('3) Renderiza el string `No se encontraron productos.` si la API no devuelve productos', () => {
+        const msg = screen.getByText(/no se encontraron productos/i);
+        expect(msg).toBeInTheDocument();
+    })
+})
