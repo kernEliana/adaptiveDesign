@@ -1,4 +1,5 @@
 const React = require("react");
+const PropTypes = require('prop-types');
 const Image = require('nordic/image');
 
 function ProductList({ i18n, products }) {
@@ -30,5 +31,11 @@ function ProductList({ i18n, products }) {
     </ol>    
   );
 }
+
+ProductList.propTypes = {
+  i18n: PropTypes.shape({
+    gettext: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 module.exports = ProductList;

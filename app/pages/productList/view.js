@@ -1,4 +1,5 @@
 const React = require('react');
+const PropTypes = require('prop-types');
 const Head = require('nordic/head');
 const Script = require('nordic/script');
 const Style = require('nordic/style');
@@ -38,7 +39,20 @@ function View(props) {
       <ProductList i18n={i18n} products={products}/>
     </section>
   );
-}
+} 
 
+View.propTypes = {
+  i18n: PropTypes.shape({
+    gettext: PropTypes.func.isRequired,
+  }).isRequired,
+  translations: PropTypes.shape({}),
+  products: PropTypes.array.isRequired
+};
+
+View.defaultProps = {
+  translations: {},
+  imagesPrefix: '/',
+  products: []
+};
 
 module.exports = injectI18n(View);
