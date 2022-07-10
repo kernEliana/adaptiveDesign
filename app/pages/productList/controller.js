@@ -7,9 +7,9 @@ const I18nProvider = require('nordic/i18n/I18nProvider');
 
 const imagesPrefix = config.assets.prefix;
 
-exports.fetchProducts = function fetchProductsList(req, res, next){
+exports.fetchProducts = function fetchProductsList(req, res, next) {
 
-    const siteId = req.platform.siteId
+    const siteId = req.platform.siteId;
 
     ProductsService.getProducts(siteId, 'celular', 0, 10)
         .then(response =>{
@@ -27,7 +27,7 @@ exports.render = function render(req, res) {
                 <View {...props} />
             </ImageProvider> 
         </I18nProvider>
-    )
+    );
 
     res.render(ProductList, {
         imagesPrefix,
