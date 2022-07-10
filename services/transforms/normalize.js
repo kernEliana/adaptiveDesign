@@ -1,3 +1,3 @@
-const normalize = (producList) => producList.map(prod => prod.buy_box_winner || prod);
+const normalize = (products) => products.map(p => p.buy_box_winner || p);
 
 module.exports = normalize;

@@ -1,27 +1,22 @@
-
 const restclient = require('nordic/restclient')({
   timeout: 5000,
 });
 
-const normalize = require('./transforms/normalize')
+const normalize = require('./transforms/normalize');
 
-class Service {
-  static getProducts(siteId,name) {
-    return restclient.get(`/sites/${siteId}/search?q=${name}`)
-      .then(response => normalize(response.data.results));
-  };
-
-  static getProductsForPage(siteId,name,limit, offset) {
-    return restclient.get(`/sites/${siteId}/search`,{
-      params:{
-        q:name,
-        limit: limit || 12,
-        offset: offset || 0
+class ProductsService {
+  static getProducts(siteId, name, offset, limit) {
+    return restclient.get(`/sites/${siteId}/search`, {
+      params: {
+        q: name, 
+        offset,
+        limit
       }
     })
-      .then(response => normalize(response.data.results));
+      .then(response => normalize(response.data.results))
+      .catch(err => ([]));
   };
-
 }
 
-module.exports = Service;
+module.exports = ProductsService;
+

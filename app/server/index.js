@@ -33,7 +33,7 @@ router.get('/', (req, res) => res.redirect(`${config.ragnar.basePath}demo`));
  * Mount routers
  */
 router.use('/demo', demoRoute);
-router.use('/productList',productListRoute);
+router.use('/productList', productListRoute);
 
 /**
  * Expose router
