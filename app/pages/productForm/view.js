@@ -40,20 +40,22 @@ function View(props) {
       <h1>productForm</h1>
 
       <ProductForm i18n={i18n} setProducts={setProducts}/>
-      {
-        products.length 
-        ? products.map(p => (
-            <ProductItem 
-              key={p.id}
-              i18n={i18n}
-              title={p.title}
-              price={p.price}
-              description={p.description}
-            />
-        ))
-        : null
-      }
 
+      <ol>
+        {
+          products.length 
+          ? products.map(p => (
+              <ProductItem 
+                key={p.id}
+                i18n={i18n}
+                title={p.title}
+                price={p.price}
+                description={p.description}
+              />
+          ))
+          : null
+        }
+      </ol>
     </section>
   );
 } 
