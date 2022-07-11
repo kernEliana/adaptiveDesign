@@ -1,12 +1,12 @@
 const React = require('react');
 const ProductCard = require('..');
 const { render, screen } = require('@testing-library/react');
-const product = require('./sample.json');
+const mockProduct = require('./sample.json');
 
 describe('Ejercicio 1 - El componente ProductCard', () => {
     let component;
     const i18n = { gettext: text => text };
-    const { id, title, price, thumbnail } = product;
+    const { id, title, price, thumbnail } = mockProduct;
 
     beforeEach(() => {
         component = render(
