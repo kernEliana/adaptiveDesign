@@ -2,7 +2,15 @@ const React = require("react");
 const PropTypes = require('prop-types');
 const Image = require('nordic/image');
 
-function ProductCard({ i18n, id, title, price, thumbnail, handleAdd, handleDelete, isFavorite }) {
+function ProductCard({ i18n, id, title, price, thumbnail, isFavorite, setFavorites }) {
+
+    function handleAdd(id) {
+        setFavorites(favorites => [...favorites, id]);
+    }
+
+    function handleDelete(id) {
+        setFavorites(favorites => favorites.filter(f => f !== id));
+    }
 
     return (
         <li className="card">
@@ -33,8 +41,7 @@ ProductCard.propTypes = {
   price: PropTypes.number.isRequired,
   thumbnail: PropTypes.string.isRequired,
   isFavorite: PropTypes.bool.isRequired,
-  handleAdd: PropTypes.func.isRequired,
-  handleDelete: PropTypes.func.isRequired
+  setFavorites: PropTypes.func.isRequired,
 };
 
 module.exports = ProductCard;

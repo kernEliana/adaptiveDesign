@@ -6,14 +6,6 @@ const { useState } = React;
 function ProductList({ i18n, products }) {
   const [favorites, setFavorites] = useState([]);
 
-  function handleAdd(id) {
-        setFavorites(favorites => [...favorites, id]);
-  }
-
-  function handleDelete(id) {
-    setFavorites(favorites => favorites.filter(f => f !== id))
-  }
-
   console.log(favorites);
 
   return (
@@ -32,9 +24,7 @@ function ProductList({ i18n, products }) {
               thumbnail={thumbnail}
               price={price}
               isFavorite={favorites.some(f => f === id)}
-              handleAdd={handleAdd}
-              handleDelete={handleDelete}
-              // setFavorites={setFavorites}
+              setFavorites={setFavorites}
             />
           )
         })
