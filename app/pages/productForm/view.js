@@ -1,10 +1,13 @@
 const React = require('react');
+const { useState } = React;
 const PropTypes = require('prop-types');
 const Head = require('nordic/head');
 const Script = require('nordic/script');
 const Style = require('nordic/style');
 const serialize = require('serialize-javascript');
 const { injectI18n } = require('nordic/i18n');
+const ProductForm = require('../../components/ProductForm');
+const ProductItem = require('../../components/ProductItem');
 
 function View(props) {
   const { i18n, translations } = props;
@@ -12,6 +15,8 @@ function View(props) {
     i18n,
     translations
   };
+
+  const [products, setProducts] = useState([]);
   
   return (
     <section>
@@ -33,6 +38,22 @@ function View(props) {
       <Script src="productForm.js" />
 
       <h1>productForm</h1>
+
+      <ProductForm i18n={i18n} setProducts={setProducts}/>
+      {
+        products.length 
+        ? products.map(p => (
+            <ProductItem 
+              key={p.id}
+              i18n={i18n}
+              title={p.title}
+              price={p.price}
+              description={p.description}
+            />
+        ))
+        : null
+      }
+
     </section>
   );
 } 

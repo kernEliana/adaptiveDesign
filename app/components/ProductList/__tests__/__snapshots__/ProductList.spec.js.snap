@@ -23,7 +23,7 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           <h4
             class="title-product"
           >
-            Samsung Galaxy A03 128 Gb Negro 4 Gb Ram 
+            Samsung Galaxy A03 128 Gb Negro 4 Gb Ram
           </h4>
           <h3
             class="price"
@@ -56,7 +56,7 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           <h4
             class="title-product"
           >
-            Motorola Edge 20 Lite 128 Gb Gris 6 Gb Ram 
+            Motorola Edge 20 Lite 128 Gb Gris 6 Gb Ram
           </h4>
           <h3
             class="price"
@@ -89,7 +89,7 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           <h4
             class="title-product"
           >
-            Samsung Galaxy S20 Fe 128 Gb Cloud Navy 6 Gb Ram 
+            Samsung Galaxy S20 Fe 128 Gb Cloud Navy 6 Gb Ram
           </h4>
           <h3
             class="price"
@@ -122,7 +122,7 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           <h4
             class="title-product"
           >
-             Moto G22 128 Gb Cosmic Black 4 Gb Ram 
+             Moto G22 128 Gb Cosmic Black 4 Gb Ram
           </h4>
           <h3
             class="price"
@@ -155,7 +155,7 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           <h4
             class="title-product"
           >
-            Samsung Galaxy A22 128 Gb Black 4 Gb Ram 
+            Samsung Galaxy A22 128 Gb Black 4 Gb Ram
           </h4>
           <h3
             class="price"
@@ -188,7 +188,7 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           <h4
             class="title-product"
           >
-            Samsung Galaxy A32 128 Gb Awesome Black 4 Gb Ram 
+            Samsung Galaxy A32 128 Gb Awesome Black 4 Gb Ram
           </h4>
           <h3
             class="price"

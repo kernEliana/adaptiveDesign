@@ -19,7 +19,7 @@ function ProductCard({ i18n, id, title, price, thumbnail, isFavorite, setFavorit
                     <Image src={thumbnail} alt={i18n.gettext(title)} lazyload="off" />
                 </figure>
                 <div className="info-products">
-                    <h4 className='title-product'>{i18n.gettext(title)} </h4>
+                    <h4 className='title-product'>{i18n.gettext(title)}</h4>
                     <h3 className='price'>${price}</h3>
                 </div>
                 {
@@ -40,8 +40,8 @@ ProductCard.propTypes = {
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   thumbnail: PropTypes.string.isRequired,
-  isFavorite: PropTypes.bool.isRequired,
-  setFavorites: PropTypes.func.isRequired,
+  isFavorite: PropTypes.bool,
+  setFavorites: PropTypes.func,
 };
 
 module.exports = ProductCard;
