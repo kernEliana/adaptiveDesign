@@ -17,12 +17,12 @@ describe('La View de ProductForm', () => {
 
     test('2) Renderiza un formulario con los campos necesarios para agregar un producto', async () => {
         const id = screen.getByLabelText(/id/i);
-        const name = screen.getByLabelText(/nombre/i);
+        const title = screen.getByLabelText(/nombre/i);
         const price = screen.getByLabelText(/precio/i);
-        const description = screen.getByLabelText(/descripci/i);
+        const description = screen.getByLabelText(/descripción/i);
 
         expect(id).toBeInTheDocument();
-        expect(name).toBeInTheDocument();
+        expect(title).toBeInTheDocument();
         expect(price).toBeInTheDocument();
         expect(description).toBeInTheDocument();
     });
@@ -34,13 +34,13 @@ describe('La View de ProductForm', () => {
 
     test('4) Permite agregar productos', async() => {
         const id = screen.getByLabelText(/id/i);
-        const name = screen.getByLabelText(/nombre/i);
+        const title = screen.getByLabelText(/nombre/i);
         const price = screen.getByLabelText(/precio/i);
-        const description = screen.getByLabelText(/descripci/i);
+        const description = screen.getByLabelText(/descripción/i);
         const button = screen.getByRole('button');
 
         fireEvent.change(id, { target: { value: 'MLA34235' }});
-        fireEvent.change(name, { target: { value: 'Sony' }});
+        fireEvent.change(title, { target: { value: 'Sony' }});
         fireEvent.change(price, { target: { value: '345476584' }});
         fireEvent.change(description, { target: { value: 'TV 353 pulgadas' }});
         fireEvent.click(button);
@@ -57,39 +57,37 @@ describe('La View de ProductForm', () => {
     test('5) Valida los campos del formulario', async() => {
         const button = screen.getByRole('button');
         
-        const name = screen.getByLabelText(/nombre/i);
+        const title = screen.getByLabelText(/nombre/i);
         const price = screen.getByLabelText(/precio/i);
         
-        fireEvent.change(name, { target: { value: 'Sony' }});
+        fireEvent.change(title, { target: { value: 'Sony' }});
         fireEvent.change(price, { target: { value: '345476584' }});
         fireEvent.click(button);
 
-        const errorMsg = await screen.findByText(/no pueden haber campos vac/i);
+        const errorMsg = await screen.findByText(/no pueden haber campos vacíos/i);
         expect(errorMsg).toBeInTheDocument();
     });
 
-    test('6) Al agregar un producto, los campos del formulario deberán quedar vacíos', async() => {
+    test('BONUS: Al agregar un producto, los campos del formulario deberán quedar vacíos', async() => {
         const id = screen.getByLabelText(/id/i);
-        const name = screen.getByLabelText(/nombre/i);
+        const title = screen.getByLabelText(/nombre/i);
         const price = screen.getByLabelText(/precio/i);
-        const description = screen.getByLabelText(/descripci/i);
+        const description = screen.getByLabelText(/descripción/i);
         const button = screen.getByRole('button');
 
         fireEvent.change(id, { target: { value: 'MLA34235' }});
-        fireEvent.change(name, { target: { value: 'Sony' }});
+        fireEvent.change(title, { target: { value: 'Sony' }});
         fireEvent.change(price, { target: { value: '345476584' }});
         fireEvent.change(description, { target: { value: 'TV 353 pulgadas' }});
         fireEvent.click(button);
 
         const idInput = screen.getByLabelText(/id/i);
-        const nameInput = screen.getByLabelText(/nombre/i);
+        const titleInput = screen.getByLabelText(/nombre/i);
         const priceInput = screen.getByLabelText(/precio/i);
-        const descriptionInput = screen.getByLabelText(/descripci/i);
-
-        screen.debug();
+        const descriptionInput = screen.getByLabelText(/descripción/i);
 
         expect(idInput.value).toBe('');
-        expect(nameInput.value).toBe('');
+        expect(titleInput.value).toBe('');
         expect(priceInput.value).toBe('');
         expect(descriptionInput.value).toBe('');
     });

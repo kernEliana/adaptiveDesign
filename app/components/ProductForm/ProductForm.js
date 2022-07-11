@@ -11,7 +11,7 @@ function ProductForm({ i18n, setProducts }) {
     };
 
     const [productForm, setProductForm] = useState(initialState);
-    const [error, setError] = useState(false);
+    const [showError, setShowError] = useState(false);
 
     const handleChange = e => {
         setProductForm({
@@ -26,9 +26,9 @@ function ProductForm({ i18n, setProducts }) {
         if(id && title && price && description) {
             setProducts(products => [...products, productForm]);
             setProductForm(initialState);
-            setError(false);
+            setShowError(false);
         } else {
-            setError(true);
+            setShowError(true);
         }
     }
 
@@ -85,7 +85,7 @@ function ProductForm({ i18n, setProducts }) {
             </div>
             <button type="submit">Agregar producto</button>
             {
-                error 
+                showError 
                 ? <p>{i18n.gettext('No pueden haber campos vacíos')}</p>
                 : null 
             }
