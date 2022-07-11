@@ -11,8 +11,8 @@ function ProductCard({ i18n, id, title, price, thumbnail, handleAdd, handleDelet
                     <Image src={thumbnail} alt={i18n.gettext(title)} lazyload="off" />
                 </figure>
                 <div className="info-products">
-                    <h4 className='price'>${price}</h4>
-                    <h3 className='title-product'>{i18n.gettext(title)} </h3>
+                    <h4 className='title-product'>{i18n.gettext(title)} </h4>
+                    <h3 className='price'>${price}</h3>
                 </div>
                 {
                     !isFavorite
