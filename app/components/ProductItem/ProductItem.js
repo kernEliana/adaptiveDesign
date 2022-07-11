@@ -21,7 +21,7 @@ ProductItem.propTypes = {
     gettext: PropTypes.func.isRequired,
   }).isRequired,
   title: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
+//   price: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired
 };
 

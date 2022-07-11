@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`La View de ProductForm 1) Renderiza 1`] = `
+<DocumentFragment>
+  <section>
+    <h1>
+      productForm
+    </h1>
+    <form>
+      <div>
+        <label
+          for="productId"
+        >
+          ID
+          <input
+            id="productId"
+            name="id"
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div>
+        <label
+          for="productName"
+        >
+          Nombre
+          <input
+            id="productName"
+            name="title"
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div>
+        <label
+          for="price"
+        >
+          Precio
+          <input
+            id="price"
+            name="price"
+            type="number"
+            value=""
+          />
+        </label>
+      </div>
+      <div>
+        <label
+          for="description"
+        >
+          Descripción
+          <textarea
+            id="description"
+            name="description"
+          />
+        </label>
+      </div>
+      <button
+        type="submit"
+      >
+        Agregar producto
+      </button>
+    </form>
+    <ol />
+  </section>
+</DocumentFragment>
+`;
