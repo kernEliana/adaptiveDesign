@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`El componente ProductCard 1) Renderiza 1`] = `
+exports[`Ejercicio 1 - El componente ProductCard 1) Renderiza 1`] = `
 <DocumentFragment>
   <li
     class="card"
@@ -30,6 +30,9 @@ exports[`El componente ProductCard 1) Renderiza 1`] = `
           Samsung Galaxy A03 128 Gb Negro 4 Gb Ram 
         </h3>
       </div>
+      <button>
+        Agregar a favoritos
+      </button>
     </article>
   </li>
 </DocumentFragment>

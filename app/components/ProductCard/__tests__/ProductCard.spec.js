@@ -1,16 +1,16 @@
 const React = require('react');
-const ProductList = require('..');
+const ProductCard = require('..');
 const { render, screen } = require('@testing-library/react');
 const product = require('./sample.json');
 
-describe('El componente ProductCard', () => {
+describe('Ejercicio 1 - El componente ProductCard', () => {
     let component;
     const i18n = { gettext: text => text };
     const { id, title, price, thumbnail } = product;
 
     beforeEach(() => {
         component = render(
-            <ProductList 
+            <ProductCard 
                 i18n={i18n} 
                 id={id}
                 title={title}
@@ -31,5 +31,5 @@ describe('El componente ProductCard', () => {
         expect(title).toBeInTheDocument();
         expect(price).toBeInTheDocument();
         expect(img).toBeInTheDocument();
-    })
+    });
 });
