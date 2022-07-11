@@ -32,7 +32,7 @@ describe('Ejercicio 1 - El componente ProductList', () => {
     });
 });
 
-describe('Ejercicio 2 - El componente ProductList', () => {
+xdescribe('Ejercicio 2 - El componente ProductList', () => {
     let component;
     const i18n = { gettext: text => text };
 
@@ -46,7 +46,7 @@ describe('Ejercicio 2 - El componente ProductList', () => {
     });
 });
 
-describe('Ejercicio 3 - El componente ProductList', () => {
+xdescribe('Ejercicio 3 - El componente ProductList', () => {
     let component;
     const i18n = { gettext: text => text };
     const mockConsole = jest.spyOn(console, "log");
