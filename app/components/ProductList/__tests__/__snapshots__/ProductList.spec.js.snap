@@ -21,14 +21,14 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           class="info-products"
         >
           <h4
-            class="price"
-          >
-            $38999
-          </h4>
-          <h3
             class="title-product"
           >
             Samsung Galaxy A03 128 Gb Negro 4 Gb Ram 
+          </h4>
+          <h3
+            class="price"
+          >
+            $38999
           </h3>
         </div>
         <button>
@@ -54,14 +54,14 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           class="info-products"
         >
           <h4
-            class="price"
-          >
-            $69999
-          </h4>
-          <h3
             class="title-product"
           >
             Motorola Edge 20 Lite 128 Gb Gris 6 Gb Ram 
+          </h4>
+          <h3
+            class="price"
+          >
+            $69999
           </h3>
         </div>
         <button>
@@ -87,14 +87,14 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           class="info-products"
         >
           <h4
-            class="price"
-          >
-            $112999
-          </h4>
-          <h3
             class="title-product"
           >
             Samsung Galaxy S20 Fe 128 Gb Cloud Navy 6 Gb Ram 
+          </h4>
+          <h3
+            class="price"
+          >
+            $112999
           </h3>
         </div>
         <button>
@@ -120,14 +120,14 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           class="info-products"
         >
           <h4
-            class="price"
-          >
-            $53000
-          </h4>
-          <h3
             class="title-product"
           >
              Moto G22 128 Gb Cosmic Black 4 Gb Ram 
+          </h4>
+          <h3
+            class="price"
+          >
+            $53000
           </h3>
         </div>
         <button>
@@ -153,14 +153,14 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           class="info-products"
         >
           <h4
-            class="price"
-          >
-            $92899
-          </h4>
-          <h3
             class="title-product"
           >
             Samsung Galaxy A22 128 Gb Black 4 Gb Ram 
+          </h4>
+          <h3
+            class="price"
+          >
+            $92899
           </h3>
         </div>
         <button>
@@ -186,14 +186,14 @@ exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
           class="info-products"
         >
           <h4
-            class="price"
-          >
-            $63999
-          </h4>
-          <h3
             class="title-product"
           >
             Samsung Galaxy A32 128 Gb Awesome Black 4 Gb Ram 
+          </h4>
+          <h3
+            class="price"
+          >
+            $63999
           </h3>
         </div>
         <button>

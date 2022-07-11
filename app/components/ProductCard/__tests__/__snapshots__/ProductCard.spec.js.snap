@@ -20,14 +20,14 @@ exports[`Ejercicio 1 - El componente ProductCard 1) Renderiza 1`] = `
         class="info-products"
       >
         <h4
-          class="price"
-        >
-          $38999
-        </h4>
-        <h3
           class="title-product"
         >
           Samsung Galaxy A03 128 Gb Negro 4 Gb Ram 
+        </h4>
+        <h3
+          class="price"
+        >
+          $38999
         </h3>
       </div>
       <button>
