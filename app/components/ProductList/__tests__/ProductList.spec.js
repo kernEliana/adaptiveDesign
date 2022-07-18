@@ -80,7 +80,7 @@ xdescribe('Ejercicio 3 - El componente ProductList', () => {
         expect(deleteButton.innerHTML).toMatch(/quitar de favoritos/i);
     }); 
 
-    test('7) El botón elimina el elemento del array, efectivamente', () => {
+    test('7) El botón efectivamente elimina el elemento del array', () => {
         act(() => {
             const addButton = screen.getAllByRole('button')[0];
             fireEvent.click(addButton);
@@ -92,5 +92,5 @@ xdescribe('Ejercicio 3 - El componente ProductList', () => {
         });
         
         expect(mockConsole).toHaveBeenLastCalledWith([]);
-    })
-})
+    });
+});

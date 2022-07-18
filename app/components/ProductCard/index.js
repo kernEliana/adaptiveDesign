@@ -4,10 +4,13 @@
  * Vamos a seguir componentizando nuestra page de productos.
  * 
  * Crear un nuevo componente llamado “ProductCard”, el cual va a 
- * encargarse de renderizar cada uno de los productos dentro de
- * "ProductList". Va a recibir por props el objeto producto a 
- * renderizar.
- * 
+ * encargarse de renderizar cada uno de los productos dentro del
+ * componente ProductList. Va a recibir por props el objeto producto 
+ * a renderizar.
+ *******************************************************************
+ * NOTA: una vez finalizado el ejercicio , correr el comando
+ * `npm run test:unit:watch productcard` y corroborar que pasen 
+ * todos los tests.
  */
 
 
