@@ -32,4 +32,10 @@
  * 
  * Bonus:
  * Al agregar un producto los campos de nuestro formulario deberán quedar vacíos.
+ * 
+ * **************************************************************
+ * NOTA: una vez finalizados los ejercicios, ejecutar el comando 
+ * `npm run test:unit:watch productform`y asegurarse de  que pasen 
+ * todos los tests.
+ **************************************************************
  */
