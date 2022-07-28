@@ -7,7 +7,7 @@ const mockProducts = require('./sample.json');
  * NOTA: A medida que avancemos con las ejercitaciones, es importante que actualices
  * la snapshot para que el primer test siga pasando. Esto lo podés hacer borrando la
  * carpeta /__tests__/snapshots de este componente o, si estás corriendo los tests con el 
- * comando npm run test:unit:watch <nombreComponente>, simplemente apretar la tecla
+ * comando `npm run test:unit:watch <nombreComponente>`, simplemente apretar la tecla
  * `u` cuando terminen de correr los tests para "updatear" la snapshot.
  */
 
