@@ -6,7 +6,7 @@
  * 
  **************************************************************
  * NOTA: para correr los tests del componente, deberás ejecutar 
- * el comando`npm run test:unit:watch productlist` y corroborar
+ * el comando `npm run test:unit:watch productlist` y corroborar
  * que los tests del Ejericicio 1 estén pasando.
  **************************************************************
  * */
