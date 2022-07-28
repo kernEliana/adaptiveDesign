@@ -35,7 +35,7 @@
  * 
  * **************************************************************
  * NOTA: una vez finalizados los ejercicios, ejecutar el comando 
- * `npm run test:unit:watch productform`y asegurarse de  que pasen 
+ * `npm run test:unit:watch productform` y asegurarse de que pasen 
  * todos los tests.
  **************************************************************
  */
