@@ -33,7 +33,7 @@
  * NOTA: descomentar el describe() del Ejericio 2 sacándole la 
  * `x` que lo antecede. Luego correr los tests ejecutando el 
  * comando `npm run test:unit:watch productlist`y asegurarse de 
- * que pasen todos los tests que no están comentados.
+ * que pasen todos los tests que no están skippeados.
  **************************************************************
  * */
 

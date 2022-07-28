@@ -7,6 +7,7 @@
  * encargarse de renderizar cada uno de los productos dentro del
  * componente ProductList. Va a recibir por props el objeto producto 
  * a renderizar.
+ * 
  *******************************************************************
  * NOTA: una vez finalizado el ejercicio , correr el comando
  * `npm run test:unit:watch productcard` y corroborar que pasen 
