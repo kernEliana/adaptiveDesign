@@ -56,7 +56,10 @@ xdescribe('Ejercicio 3 - El componente ProductList', () => {
     });
 
     test('4) Renderiza un array de productos, cada uno con un botón para agregar a favoritos', () => {
-        const button = screen.getAllByRole('button')[0];
+        const buttons = screen.getAllByText(/agregar a favoritos/i, { selector: 'button' });
+        const button = buttons[0];
+
+        expect(buttons.length).toBe(6);
         expect(button).toBeInTheDocument();
         expect(button.innerHTML).toMatch(/agregar a favoritos/i);
     });
