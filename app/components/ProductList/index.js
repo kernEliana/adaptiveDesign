@@ -1,5 +1,5 @@
 /**
- * Clase 1 - Ejercicitación
+ * Clase 1 - Ejercitación
  * 
  * En esta carpeta deberás crear el componente que renderice
  * el listado de productos. 

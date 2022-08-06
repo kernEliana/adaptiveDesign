@@ -7,7 +7,7 @@
  * - Id del producto
  * - Nombre del producto
  * - Precio del producto
- * - Descripción breve
+ * - Descripción breve del producto
  * 
  * - Crear un botón para agregar producto
  * 
@@ -25,17 +25,17 @@
  * tanto, deberemos contar con validaciones. (Si alguno de los campos están vacíos,
  * deberíamos mostrar el siguiente mensaje: ‘no pueden haber campos vacíos’)
  * 
- * Atención!:
- * Tenemos que hacer uso de hooks.
- * Validaciones
- * Mapeo de los productos en el estado
+ * Atención! Tenemos que hacer uso de:
+ * - Hooks.
+ * - Validaciones.
+ * - Mapeo de los productos en el estado.
  * 
  * Bonus:
- * Al agregar un producto los campos de nuestro formulario deberán quedar vacíos.
+ * Luego de agregar un producto los campos de nuestro formulario deberán quedar vacíos.
  * 
- * **************************************************************
+ * ****************************************************************
  * NOTA: una vez finalizados los ejercicios, ejecutar el comando 
  * `npm run test:unit:watch productform` y asegurarse de que pasen 
  * todos los tests.
- **************************************************************
+ ******************************************************************
  */
