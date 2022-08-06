@@ -55,42 +55,39 @@ xdescribe('Ejercicio 3 - El componente ProductList', () => {
         component = render(<ProductList i18n={i18n} products={mockProducts}/>);
     });
 
-    test('4) Renderiza un array de productos, cada uno con un botón para agregar a favoritos', () => {
+    test('4) Renderiza una lista de productos, cada uno con un botón para agregar a favoritos', () => {
         const buttons = screen.getAllByText(/agregar a favoritos/i, { selector: 'button' });
-        const button = buttons[0];
 
         expect(buttons.length).toBe(6);
-        expect(button).toBeInTheDocument();
-        expect(button.innerHTML).toMatch(/agregar a favoritos/i);
     });
 
     test('5) Permite agregar un producto de la lista al array de favoritos', () => {
         act(() => {
-            const button = screen.getAllByRole('button')[0];
+            const button = screen.getAllByText(/agregar a favoritos/i, { selector: 'button' })[0];
             fireEvent.click(button);
         });
         
         expect(mockConsole).toHaveBeenLastCalledWith(["MLA1131686227"]);
     });
 
-    test('6) Luego de haber sido agregado, renderiza un botón que permite quitar el producto del array', () => {
+    test('6) Luego de haber sido agregado, renderiza un botón que permite quitar el producto del array de favoritos', () => {
         act(() => {
-            const addButton = screen.getAllByRole('button')[0];
+            const addButton = screen.getAllByText(/agregar a favoritos/i, { selector: 'button' })[0];
             fireEvent.click(addButton);
         });
 
-        const deleteButton = screen.getAllByRole('button')[0];
-        expect(deleteButton.innerHTML).toMatch(/quitar de favoritos/i);
+        const deleteButton = screen.getAllByText(/quitar de favoritos/i, { selector: 'button' })[0];
+        expect(deleteButton).toBeInTheDocument();
     }); 
 
-    test('7) El botón efectivamente elimina el elemento del array', () => {
+    test('7) El botón efectivamente elimina el elemento del array de favoritos', () => {
         act(() => {
-            const addButton = screen.getAllByRole('button')[0];
+            const addButton = screen.getAllByText(/agregar a favoritos/i, { selector: 'button' })[0];
             fireEvent.click(addButton);
         });
 
         act(() => {
-            const deleteButton = screen.getAllByRole('button')[0];
+            const deleteButton = screen.getAllByText(/quitar de favoritos/i, { selector: 'button' })[0];
             fireEvent.click(deleteButton);
         });
         
