@@ -12,6 +12,7 @@
  * NOTA: una vez finalizado el ejercicio , correr el comando
  * `npm run test:unit:watch productcard` y corroborar que pasen 
  * todos los tests.
+ *******************************************************************
  */
 
 

@@ -24,6 +24,10 @@
  /**
  * Clase 2 - Ejercitación
  * 
+ * Ejercicio 2 - Reemplazar la lógica de la card de producto por 
+ * el componente “ProductCard”. Usar propTypes en el componente 
+ * para validar el tipo de dato de cada propiedad del objeto producto.
+ * 
  * Ejercicio 3 - Si la API no nos responde con productos vamos a 
  * mostrar el mensaje “No se encontraron productos”. Probar que 
  * funcione haciendo una búsqueda que no encuentre productos en 

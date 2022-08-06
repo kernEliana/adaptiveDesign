@@ -5,10 +5,10 @@
  * en la ejercitación de Nordic Client-side.
  * 
  * Deberás crear los archivos necesarios para que la page 
- * funcione. No olvides e implementar el client cuando y donde 
+ * funcione. No olvides implementar el client cuando y donde 
  * sea necesario.
  * 
- * En la carpeta /components, crear un nuevo componente
+ * En la carpeta app/components, crear un nuevo componente
  * llamado ProductList. Este componente debe recibir un 
  * array de productos como prop y encargarse de renderizar 
  * ese array como lo hace nuestra View de la page “productList”.
