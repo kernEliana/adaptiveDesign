@@ -23,7 +23,7 @@
  * 
  * Los productos no podrán ser agregados si los campos están vacíos, por lo 
  * tanto, deberemos contar con validaciones. (Si alguno de los campos están vacíos,
- * deberíamos mostrar el siguiente mensaje: ‘no pueden haber campos vacíos’)
+ * deberíamos mostrar el siguiente mensaje: ‘No pueden haber campos vacíos.’)
  * 
  * Atención! Tenemos que hacer uso de:
  * - Hooks.
