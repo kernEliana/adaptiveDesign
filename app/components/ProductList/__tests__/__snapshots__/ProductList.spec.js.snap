@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ejercicio 1 - El componente ProductList 1) Renderiza 1`] = `
+<DocumentFragment>
+  <ul
+    style="list-style-type: none;"
+  />
+</DocumentFragment>
+`;

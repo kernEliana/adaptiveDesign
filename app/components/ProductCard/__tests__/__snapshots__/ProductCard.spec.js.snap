@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ejercicio 1 - El componente ProductCard 1) Renderiza 1`] = `
+<DocumentFragment>
+  <li>
+    <h3>
+      Samsung Galaxy A03 128 Gb Negro 4 Gb Ram
+    </h3>
+    <img
+      alt="Samsung Galaxy A03 128 Gb Negro 4 Gb Ram"
+      class=""
+      decoding="async"
+      src="http://http2.mlstatic.com/D_737913-MLA49433851234_032022-I.jpg"
+    />
+    <p
+      style="background-color: rgb(255, 141, 59); border-radius: 5px; text-align: center; width: 75px;"
+    >
+      $38999
+    </p>
+  </li>
+</DocumentFragment>
+`;
