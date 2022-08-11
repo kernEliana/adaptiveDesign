@@ -34,7 +34,9 @@ const ProductCard = (props) => {
                 >
                   ${price}
                 </p>
-                <button aria-label="Agregar producto a favoritos" onClick={(e) => handleFav(id)}>{!isFav ? 'Agregar a favoritos' : 'Eliminar de favoritos'}</button>
+                <button aria-label="Agregar producto a favoritos" 
+                onClick={(e) => handleFav(id)}>{!isFav ? 
+                'Agregar a favoritos' : 'Eliminar de favoritos'}</button>
               </li>
     </>
   );
