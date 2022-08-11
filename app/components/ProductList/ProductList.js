@@ -1,9 +1,28 @@
 const React = require("react");
 const PropTypes = require("prop-types");
 const ProductCard = require("../ProductCard");
+const { useState, useEffect, useRef } = React;
 
 const ProductList = (props) => {
   const { productList, i18n } = props;
+
+  const [favList, setFavList] = useState([]);
+
+  const addFav = (id) => {
+    const product =  productList.find(product => product.id === id)
+
+    setFavList(favList => (
+      [...favList , product]
+    ));
+  }
+
+  const removeFav = (id) => {
+    const products =  favList.filter(product => product.id !== id)
+
+    setFavList(products);
+  }
+
+  console.log(favList);
 
   return (
     <>
@@ -17,6 +36,8 @@ const ProductList = (props) => {
               thumbnail={product.thumbnail}
               price={product.price}
               i18n={i18n}
+              addFav={addFav}
+              removeFav={removeFav}
             />
           );
         })}

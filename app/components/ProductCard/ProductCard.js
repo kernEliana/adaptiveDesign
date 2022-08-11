@@ -1,9 +1,20 @@
 const React = require("react");
 const PropTypes = require("prop-types");
 const Image = require('nordic/image');
+const { useState, useEffect, useRef } = React;
+
 
 const ProductCard = (props) => {
-  const { title, id, thumbnail, price, i18n } = props;
+  const { title, id, thumbnail, price, i18n, addFav, removeFav } = props;
+
+  const [isFav, setIsFav] = useState(false);
+
+  const handleFav= (id) => {
+    !isFav ? addFav(id) : removeFav(id);
+    setIsFav(isFav => !isFav);
+  }
+
+
   return (
     <>
               <li key={id}>
@@ -23,6 +34,7 @@ const ProductCard = (props) => {
                 >
                   ${price}
                 </p>
+                <button aria-label="Agregar producto a favoritos" onClick={(e) => handleFav(id)}>{!isFav ? 'Agregar a favoritos' : 'Eliminar de favoritos'}</button>
               </li>
     </>
   );

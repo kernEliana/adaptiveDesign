@@ -11,7 +11,7 @@ const restclient = require('nordic/restclient')({
     baseURL: '/api'
 });
 
-const { useState, useEffect } = React;
+const { useState, useEffect, useRef } = React;
 
 /**
  * View Component Using Page. This is the same component located under pages/demo/view but it uses the Page Component
