@@ -1,11 +1,11 @@
 @import '../../styles/common';
 
 .ul-small{
-  @include sizeBackground(red, 200px)
+  @include sizeBackground(rgb(172, 65, 65), 200px)
 }
 .ul-medium{
     @include sizeBackground(pink, 400px)
   }
 .ul-large{
-    @include sizeBackground(rgb(150, 150, 210), 600px)
+    @include sizeBackground(rgb(92, 92, 140), 600px)
   }
