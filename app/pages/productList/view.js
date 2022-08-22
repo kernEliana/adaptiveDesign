@@ -5,6 +5,7 @@ const Head = require("nordic/head");
 const { injectI18n } = require("nordic/i18n");
 const Image = require("nordic/image");
 const ProductList = require("../../components/ProductList");
+const Style = require('nordic/style')
 
 const restclient = require('nordic/restclient')({
     timeout: 5000,
@@ -17,14 +18,16 @@ const { useState, useEffect, useRef } = React;
  * View Component Using Page. This is the same component located under pages/demo/view but it uses the Page Component
  */
 function View(props) {
-  const { products, i18n, translations } = props; // ssr
+  const { products, i18n, translations, size} = props; // ssr
 
   const preloadedState = {
     // csr
     products,
     i18n,
     translations,
+    size,
   };
+
 
   const [productList, setProductList] = useState(products);
 
@@ -45,8 +48,8 @@ function View(props) {
         <title>{i18n.gettext("Product List")}</title>
       </Head>
 
-      <ProductList productList={productList} i18n={i18n} />
-
+      <ProductList productList={productList} size={size} i18n={i18n} />
+      <Style href="productList.css"/>
       <Script>
         {`
            window.__PRELOADED_STATE__ = ${serialize(preloadedState, {

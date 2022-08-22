@@ -17,7 +17,8 @@ const path = require('path');
 
 const entrypoints = {
   demo: './app/client/demo.js',
-  productList: './app/client/productList.js'
+  productList: './app/client/productList.js',
+  flex: './app/client/flex.js'
 };
 
 const generateLegacyBundles = entryPoints => Object.keys(entryPoints).reduce((accumulator, entrypointName) => {

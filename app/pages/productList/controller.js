@@ -34,5 +34,6 @@ exports.render = function render(req, res) {
     products: res.locals.products,
     translations: req.translations,
     imagesPrefix,
+    size: req.device,
   });
 };

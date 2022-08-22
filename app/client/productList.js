@@ -1,6 +1,7 @@
 /**
  * Styles
  */
+require('../pages/productList/styles.scss')
 
 /**
  * Module dependencies
@@ -15,7 +16,7 @@ const ProductListView = require("../pages/productList/view");
 /**
  * Get server state
  */
-const { products, translations, imagesPrefix } = window.__PRELOADED_STATE__;
+const { products, translations, imagesPrefix, size} = window.__PRELOADED_STATE__;
 
 /**
  * i18n
@@ -28,7 +29,7 @@ const i18n = new I18n({ translations });
 hydrate(
   <I18nProvider i18n={i18n}>
     <ImageProvider prefix={imagesPrefix}>
-      <ProductListView products={products}/>
+      <ProductListView products={products} size={size}/>
     </ImageProvider>
   </I18nProvider>,
   document.getElementById("root-app")

@@ -4,13 +4,18 @@ const ProductCard = require("../ProductCard");
 const { useState, useEffect, useRef } = React;
 
 const ProductList = (props) => {
-  const { productList, i18n } = props;
+  const { productList, i18n, size} = props;
+  const { type } = size
 
   const [favList, setFavList] = useState([]);
 
+  let deviceSize ='ul-large'
+  if(type === 'tablet') deviceSize ='ul-medium'
+  if(type === 'mobile') deviceSize ='ul-small'
+  
+
   const addFav = (id) => {
     const product =  productList.find(product => product.id === id)
-
     setFavList(favList => (
       [...favList , product]
     ));
@@ -23,10 +28,12 @@ const ProductList = (props) => {
   }
 
   console.log(favList);
+  console.log('size',size)
 
   return (
     <>
-      <ul style={{ listStyleType: "none" }}>
+      {/* <ul style={{ listStyleType: "none" }}> */}
+      <ul className={deviceSize}>
         {productList?.map((product) => {
           return (
             <ProductCard
@@ -54,7 +61,7 @@ ProductList.propTypes = {
       thumbnail: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
     })
-  ).isRequired,
+  ).isRequired
 };
 
 module.exports = ProductList;
